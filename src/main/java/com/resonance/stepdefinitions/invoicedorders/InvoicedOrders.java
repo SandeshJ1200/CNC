@@ -1,6 +1,7 @@
 package com.resonance.stepdefinitions.invoicedorders;
 import org.testng.asserts.*;
 
+import com.resonance.pages.DashboardManager;
 import com.resonance.pages.HomePage;
 
 import io.cucumber.java.en.Given;
@@ -8,22 +9,27 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class InvoicedOrders {
+	HomePage home = new HomePage();
+	DashboardManager dmr = new DashboardManager();
+	
    @Given ("User logs into the application as manager")
    public void loginToTheApplication() {
-		HomePage home = new HomePage();
-		home.clickOnLogin();
-		home.enterUserName("manager");
-		home.enterPassword("12345678");
-		home.clickOnLogin();
-	}
-      @When ("manager selects Invoiced order from picking list")
-     public void SelectInvoicedOrder() {
 		
+		home.loginAsManager();
+	}
+      @When ("manager selects picking tab")
+    public void selectPickingTab() throws InterruptedException {
+		dmr.clickOnPickingTab();
+     Thread.sleep(1000);
+	}
+      
+      @Then ("manager selects Invoiced orders option")
+      public void selectInvoicedOrders() throws InterruptedException {
+		dmr.clickOnInvoicedOrdersTab();
+		Thread.sleep(1000);
 
 	}
-      @Then ("manager should see the list of Invoiced details")
-      public void InvoicedList() {
-		
-
-	}
+     
+      
+     
 }
