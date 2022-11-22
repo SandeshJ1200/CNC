@@ -14,10 +14,13 @@ public class DashboardManager {
 		PageFactory.initElements(base.thread.get(), this);
 		keyword = new Keyword();
 	}
-	@FindBy(xpath ="//*[@id=\"sidebar_menu\"]/ul/li[3]/a/span[1]")
+	@FindBy(xpath= "//*[@id=\"sidebar_menu\"]/ul/li[3]/a")
 	private WebElement pickingTab;
 	@FindBy(xpath= "//*[@id=\"picking_invoiced_order\"]/a")
 	private WebElement invoicedOrdersTab;
+	@FindBy(xpath= "//span[starts-with(text() , ' Confirm Picked Order')]")
+	private WebElement confirmPickedOrdersTab;
+	
 	
 	public void clickOnPickingTab() {
 		pickingTab.click();
@@ -25,6 +28,10 @@ public class DashboardManager {
 	}
 	public void clickOnInvoicedOrdersTab() {
 		invoicedOrdersTab.click();
+
+	}
+	public void clickonConfirmPickedOrdersTab() {
+		confirmPickedOrdersTab.click();
 
 	}
 	
