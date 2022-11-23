@@ -18,8 +18,9 @@ public class DashboardManager {
 	private WebElement pickingTab;
 	@FindBy(xpath= "//*[@id=\"picking_invoiced_order\"]/a")
 	private WebElement invoicedOrdersTab;
-	@FindBy(xpath= "//span[starts-with(text() , ' Confirm Picked Order')]")
-	private WebElement confirmPickedOrdersTab;
+	@FindBy(xpath = "//input[starts-with(@aria-controls, 'myTable')]")
+	private WebElement searchTextBox;
+
 	
 	
 	public void clickOnPickingTab() {
@@ -30,10 +31,15 @@ public class DashboardManager {
 		invoicedOrdersTab.click();
 
 	}
-	public void clickonConfirmPickedOrdersTab() {
-		confirmPickedOrdersTab.click();
+	public void clickOnSearchTextBox() {
+		searchTextBox.click();
 
 	}
+	public void typeIntheSearchBox() {
+		searchTextBox.sendKeys("04A00197");
+
+	}
+	
 	
      
 }

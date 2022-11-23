@@ -1,6 +1,7 @@
 package com.resonance.stepdefinitions.invoicedorders;
 import org.testng.asserts.*;
 
+
 import com.resonance.pages.DashboardManager;
 import com.resonance.pages.HomePage;
 
@@ -26,10 +27,18 @@ public class InvoicedOrders {
       @Then ("manager selects Invoiced orders option")
       public void selectInvoicedOrders() throws InterruptedException {
 		dmr.clickOnInvoicedOrdersTab();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 	}
-     
-      
+      @Then ("manager clicks on Search Text Box")
+     public void clickOnSearchTextBox() {
+		dmr.clickOnSearchTextBox();
+
+	}
+      @Then ("manager should be able to search customer with Name,OrderID,Invoiced Date,Status,RouteNumber")
+      public void typeIntheSearchBox() {
+	   dmr.typeIntheSearchBox();
+
+	}
      
 }
