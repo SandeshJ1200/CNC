@@ -22,6 +22,11 @@ public class DashboardManager {
 	private WebElement searchTextBox;
 	@FindBy(xpath = "//i[starts-with(@class, 'icon fa fa-tasks tip')]")
 	private WebElement actionsTab;
+	@FindBy(xpath = "//*[@id=\"myTable\"]/tbody/tr[1]/td[8]/div/div/div/button")
+	private WebElement ActionsTab;
+	@FindBy(xpath = "//*[@id=\"myTable\"]/tbody/tr[1]/td[8]/div/div/div/ul/li[1]/a")
+	private WebElement EditTab;
+	
 
 	
 	
@@ -43,6 +48,14 @@ public class DashboardManager {
 	}
 	public void clickOnActionsTab() {
 		actionsTab.click();
+
+	}
+	   public void selectActionTab() {
+		ActionsTab.click();
+
+	}
+	 public void selectEditTab() {
+		 EditTab.click();
 
 	}
 	
