@@ -20,6 +20,8 @@ public class DashboardManager {
 	private WebElement invoicedOrdersTab;
 	@FindBy(xpath = "//input[starts-with(@aria-controls, 'myTable')]")
 	private WebElement searchTextBox;
+	@FindBy(xpath = "//i[starts-with(@class, 'icon fa fa-tasks tip')]")
+	private WebElement actionsTab;
 
 	
 	
@@ -37,6 +39,10 @@ public class DashboardManager {
 	}
 	public void typeIntheSearchBox() {
 		searchTextBox.sendKeys("04A00197");
+
+	}
+	public void clickOnActionsTab() {
+		actionsTab.click();
 
 	}
 	

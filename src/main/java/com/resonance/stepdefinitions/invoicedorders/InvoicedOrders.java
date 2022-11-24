@@ -5,6 +5,7 @@ import org.testng.asserts.*;
 import com.resonance.pages.DashboardManager;
 import com.resonance.pages.HomePage;
 
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,6 +13,7 @@ import io.cucumber.java.en.When;
 public class InvoicedOrders {
 	HomePage home = new HomePage();
 	DashboardManager dmr = new DashboardManager();
+	
 	
    @Given ("User logs into the application as manager")
    public void loginToTheApplication() {
@@ -40,5 +42,13 @@ public class InvoicedOrders {
 	   dmr.typeIntheSearchBox();
 
 	}
+      @Then ("manager clicks on the action button")
+      public void selectActionTab() {
+       dmr.clickOnActionsTab();
+
+	}
+	   
+
+	
      
 }
