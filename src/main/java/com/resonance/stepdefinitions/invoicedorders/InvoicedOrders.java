@@ -61,4 +61,38 @@ public class InvoicedOrders {
 		dmr.selectEditTab();
 
 	}
+	@Then("manager clicks on the From Date Search box")
+	       public void fdSearchTextBox() {
+			dmr.prevSerachBox();
+
+	}
+	@Then("manager clicks on the left Arrow")
+	public void clickonLeftArrow() {
+		dmr.fromDateSearchBox();
+
+	}
+	@Then("manager selects a date from the From date Search Box")
+	     public void selectFromDate() {
+			dmr.fromSelectDate();
+
+	}
+	@Then("manager clicks on the To Date Search box")
+	     public void nextDateSearchBox() {
+			dmr.nextSearchBox();
+
+	}
+	
+	@Then("manager select a date from the To date Search Box")
+	   public void selectToDate() {
+		dmr.toSelectDate();
+
+	}
+	
+	@Then("manager click on the submit button")
+	  public void submit() {
+		dmr.clicksubmitButton();
+
+	}
+
+		
 }

@@ -26,10 +26,21 @@ public class DashboardManager {
 	private WebElement ActionsTab;
 	@FindBy(xpath = "//*[@id=\"myTable\"]/tbody/tr[1]/td[8]/div/div/div/ul/li[1]/a")
 	private WebElement EditTab;
+	@FindBy(xpath = "//input[starts-with(@name, 'start_date')]")
+	private WebElement fromDateSearchBox;
+	@FindBy(xpath = "/html/body/div[7]/div[3]/table/thead/tr[1]/th[1]/i")
+	private WebElement leftArrowTab;
+	@FindBy(xpath = "/html/body/div[7]/div[3]/table/tbody/tr[2]/td[3]")
+	private WebElement selectDate;
+	@FindBy(xpath ="//input[starts-with(@name, 'end_date')]")
+	private WebElement toDateSearchBox;
+	@FindBy(xpath = "/html/body/div[8]/div[3]/table/tbody/tr[4]/td[4]")
+	private WebElement toSelectDate;
+	@FindBy(xpath ="//button[text()=' Submit']")
+	private WebElement submitButton;
+	
 	
 
-	
-	
 	public void clickOnPickingTab() {
 		pickingTab.click();
 
@@ -58,6 +69,32 @@ public class DashboardManager {
 		 EditTab.click();
 
 	}
+	 public void prevSerachBox() {
+		 fromDateSearchBox.click();
+
+	}
+	 public void fromDateSearchBox() {
+		leftArrowTab.click();
+
+	}
+	  public void fromSelectDate() {
+		selectDate.click();
+
+	}
+	  public void nextSearchBox() {
+		  toDateSearchBox.click();
+
+	}
+	  
+	  public void toSelectDate() {
+		  toSelectDate.click();
+
+	}
+	  public void clicksubmitButton() {
+		  submitButton.click();
+
+	}
+	
 	
 	
      
