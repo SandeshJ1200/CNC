@@ -93,6 +93,16 @@ public class InvoicedOrders {
 		dmr.clicksubmitButton();
 
 	}
+	@Then("manager should click on the Action button from the table")
+	public void clickActionsTab() {
+		dmr.selectActionTab();
 
+	}
+	
+	@Then("manager clicks on the Download Invoice from the dropdown list")
+	   public void selectDownloadInvoiced() {
+		dmr.clickonDownload();
+
+	}
 		
 }

@@ -38,6 +38,8 @@ public class DashboardManager {
 	private WebElement toSelectDate;
 	@FindBy(xpath ="//button[text()=' Submit']")
 	private WebElement submitButton;
+	@FindBy(xpath="//a[@href=\"https://qa-cnc.rameesystems.com/admin/sales/pdf/201\"]")
+	private WebElement downloadTab;
 	
 	
 
@@ -92,6 +94,10 @@ public class DashboardManager {
 	}
 	  public void clicksubmitButton() {
 		  submitButton.click();
+
+	}
+	  public void clickonDownload() {
+		downloadTab.click();
 
 	}
 	

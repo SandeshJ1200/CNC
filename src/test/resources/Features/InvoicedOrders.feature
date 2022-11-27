@@ -40,14 +40,23 @@ Scenario: Manager should be able to search the Invoiced with details such as
  
  Scenario: manager should be able to see the list of Invoiced between the date he wanted to see
  
+ #Given User logs into the application as manager
+ #When manager selects picking tab
+ #Then manager selects Invoiced orders option
+ #Then manager clicks on the From Date Search box
+ #Then manager clicks on the left Arrow
+ #Then manager selects a date from the From date Search Box
+ #Then manager clicks on the To Date Search box
+ #Then manager select a date from the To date Search Box
+ #Then manager click on the submit button
+ # manager should be able to see the list of Invoiced between the date he wanted to see
+ 
+ 
+ Scenario: Manager should be able to download the Invoiced of Particular Order
+ 
  Given User logs into the application as manager
  When manager selects picking tab
  Then manager selects Invoiced orders option
- Then manager clicks on the From Date Search box
- Then manager clicks on the left Arrow
- Then manager selects a date from the From date Search Box
- Then manager clicks on the To Date Search box
- Then manager select a date from the To date Search Box
- Then manager click on the submit button
- # manager should be able to see the list of Invoiced between the date he wanted to see
+ Then manager should click on the Action button from the table
+ Then manager clicks on the Download Invoice from the dropdown list
      
