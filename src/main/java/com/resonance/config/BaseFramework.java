@@ -28,7 +28,7 @@ public class BaseFramework {
 		launchUrl(conf.getAppUrl());
 	}
 
-	@After
+	
 	public void tearDown() {
 		thread.get().close();
 		thread.remove();
